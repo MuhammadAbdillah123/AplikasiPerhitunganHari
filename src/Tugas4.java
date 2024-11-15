@@ -256,13 +256,11 @@ public class Tugas4 extends javax.swing.JFrame {
 
         LocalDate date = LocalDate.of(year, month, 1);
 
-        
         int daysInMonth = date.lengthOfMonth();
         boolean isLeapYear = date.isLeapYear();
         String firstDay = date.getDayOfWeek().toString();
         String lastDay = date.withDayOfMonth(daysInMonth).getDayOfWeek().toString();
 
-       
         jLabel3.setText("Hasil Jumlah Hari : " + daysInMonth);
         jLabel4.setText("Tahun Kabisat : " + (isLeapYear ? "Ya" : "Tidak"));
         jLabel5.setText("Hari Pertama Dalam Bulan : " + firstDay);
