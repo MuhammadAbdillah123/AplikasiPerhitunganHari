@@ -254,17 +254,17 @@ public class Tugas4 extends javax.swing.JFrame {
         try {
         int year = (int) jSpinner1.getValue();
         String monthString = (String) jComboBox1.getSelectedItem();
-        int month = jComboBox1.getSelectedIndex() + 1; // January = 0, so +1 to get correct month number
+        int month = jComboBox1.getSelectedIndex() + 1; 
 
         LocalDate date = LocalDate.of(year, month, 1);
 
-        // Calculate days in the month
+        
         int daysInMonth = date.lengthOfMonth();
         boolean isLeapYear = date.isLeapYear();
         String firstDay = date.getDayOfWeek().toString();
         String lastDay = date.withDayOfMonth(daysInMonth).getDayOfWeek().toString();
 
-        // Display results
+       
         jLabel3.setText("Hasil Jumlah Hari : " + daysInMonth);
         jLabel4.setText("Tahun Kabisat : " + (isLeapYear ? "Ya" : "Tidak"));
         jLabel5.setText("Hari Pertama Dalam Bulan : " + firstDay);
