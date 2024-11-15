@@ -273,17 +273,17 @@ public class Tugas4 extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         try {
-        // Get selected month from JComboBox and adjust for indexing (January = 0, so +1 to align correctly)
+        
         int month = jComboBox1.getSelectedIndex() ;
         
-        // Get the year from the spinner
+        
         int year = (int) jSpinner1.getValue();
         
-        // Set the calendar date to the first day of the selected month and year
+        
         LocalDate selectedDate = LocalDate.of(year, month, 1);
         java.util.Date date = java.sql.Date.valueOf(selectedDate);
         
-        // Update the JCalendar to show the selected date
+        
         jCalendar3.setDate(date);
         jCalendar4.setDate(date);
         
